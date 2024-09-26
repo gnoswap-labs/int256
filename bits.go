@@ -1,5 +1,3 @@
-
-
 // Copyright 2017 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
@@ -16,7 +14,7 @@
 // architecture and the Go release.
 package u256
 
-const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
+// const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
 
 // UintSize is the size of a uint in bits.
 const UintSize = uintSize
@@ -506,7 +504,7 @@ func Div(hi, lo, y uint) (quo, rem uint) {
 // Div32 panics for y == 0 (division by zero) or y <= hi (quotient overflow).
 func Div32(hi, lo, y uint32) (quo, rem uint32) {
 	if y != 0 && y <= hi {
-		panic(overflowError)
+		panic(errOverflow)
 	}
 	z := uint64(hi)<<32 | uint64(lo)
 	quo, rem = uint32(z/uint64(y)), uint32(z%uint64(y))
@@ -519,10 +517,10 @@ func Div32(hi, lo, y uint32) (quo, rem uint32) {
 // Div64 panics for y == 0 (division by zero) or y <= hi (quotient overflow).
 func Div64(hi, lo, y uint64) (quo, rem uint64) {
 	if y == 0 {
-		panic(divideError)
+		panic(errDivide)
 	}
 	if y <= hi {
-		panic(overflowError)
+		panic(errOverflow)
 	}
 
 	// If high part is zero, we can directly return the results.

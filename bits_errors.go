@@ -10,8 +10,5 @@ import (
 	"errors"
 )
 
-//go:linkname overflowError runtime.overflowError
-var overflowError error = errors.New("u256: integer overflow")
-
-//go:linkname divideError runtime.divideError
-var divideError error = errors.New("u256: integer divide by zero")
+var errOverflow error = errors.New("u256: integer overflow")
+var errDivide error = errors.New("u256: integer divide by zero")
