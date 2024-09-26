@@ -1,4 +1,4 @@
-package u256
+package uint256
 
 import "testing"
 
@@ -150,6 +150,16 @@ func TestDiv(t *testing.T) {
 		if got.Neq(want) {
 			t.Errorf("Div(%s, %s) = %v, want %v", tc.x, tc.y, got.ToString(), want.ToString())
 		}
+	}
+}
+
+func BenchmarkDiv(b *testing.B) {
+	x := MustFromDecimal("31337")
+	y := MustFromDecimal("3")
+	z := &Uint{}
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		z.Div(x, y)
 	}
 }
 

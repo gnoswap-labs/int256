@@ -12,7 +12,7 @@
 // the code in this package will not be used. Which
 // functions are implemented by the compiler depends on the
 // architecture and the Go release.
-package u256
+package uint256
 
 // const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
 

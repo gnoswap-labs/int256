@@ -4,7 +4,7 @@
 
 //go:build !compiler_bootstrap
 
-package u256
+package uint256
 
 import (
 	"errors"

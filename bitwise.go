@@ -1,7 +1,7 @@
 // bitwise contains bitwise operations for Uint instances.
 // This file includes functions to perform bitwise AND, OR, XOR, and NOT operations, as well as bit shifting.
 // These operations are crucial for manipulating individual bits within a 256-bit unsigned integer.
-package u256
+package uint256
 
 // Or sets z = x | y and returns z.
 func (z *Uint) Or(x, y *Uint) *Uint {

@@ -2,7 +2,7 @@
 // This includes basic binary operations such as addition, subtraction, multiplication, division, and modulo operations
 // as well as overflow checks, and negation. These functions are essential for numeric
 // calculations using 256-bit unsigned integers.
-package u256
+package uint256
 
 import (
 	"math/bits"

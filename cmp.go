@@ -2,7 +2,7 @@
 // These comparison functions cover a range of operations including equality checks, less than/greater than
 // evaluations, and specialized comparisons such as signed greater than. These are fundamental for logical
 // decision making based on Uint values.
-package u256
+package uint256
 
 import (
 	"math/bits"

@@ -1,4 +1,4 @@
-package u256
+package uint256
 
 // lower(c) is a lower-case letter if and only if
 // c is either that lower-case letter or the equivalent upper-case letter.

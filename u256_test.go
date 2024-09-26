@@ -1,4 +1,4 @@
-package u256
+package uint256
 
 import (
 	"testing"

@@ -1,6 +1,6 @@
 // Ported from https://github.com/holiman/uint256
 // This package provides a 256-bit unsigned integer type, Uint256, and associated functions.
-package u256
+package uint256
 
 import (
 	"errors"

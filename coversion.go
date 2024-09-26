@@ -1,7 +1,7 @@
 // conversions contains methods for converting Uint instances to other types and vice versa.
 // This includes conversions to and from basic types such as uint64 and int32, as well as string representations
 // and byte slices. Additionally, it covers marshaling and unmarshaling for JSON and other text formats.
-package u256
+package uint256
 
 import (
 	"encoding/binary"
